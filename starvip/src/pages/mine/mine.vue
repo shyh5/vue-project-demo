@@ -39,7 +39,7 @@
     <p>第二种：实现方法 使用component</p>
     <component :is="type"></component>
     <button @click="change" style="background-color: aqua;color: white;">点击切换</button>
-    <scan>注：上面的方法切换的时候，其实是销毁上一个，然后重新创建新的，会有性能的消耗，考虑到这里可以在子组件上加上v-once 实现控件在内存中存储，每次不用重新创建，提高性能</scan>
+    <p>注：上面的方法切换的时候，其实是销毁上一个，然后重新创建新的，会有性能的消耗，考虑到这里可以在子组件上加上v-once 实现控件在内存中存储，每次不用重新创建，提高性能</p>
   </div>
 
 </template>

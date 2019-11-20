@@ -1,21 +1,24 @@
 <template>
-  <div id="container">
-    <p>正式项目</p>
+  <div>
+    <home-header></home-header>
+    <home-swiper></home-swiper>
+    <div>test</div>
   </div>
 </template>
 
 <script>
-    export default {
-        name: "merc"
+  import HomeHeader from './components/HomeHeader';
+  import HomeSwiper from './components/HomeSwiper';
+
+  export default {
+    name: "merc",
+    components: {
+      HomeHeader,
+      HomeSwiper
     }
+  }
 </script>
 
 <style scoped>
-  #container {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
 
-  }
 </style>
