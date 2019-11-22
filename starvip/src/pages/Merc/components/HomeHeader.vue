@@ -1,6 +1,6 @@
 <template>
   <div id="header">
-    <div class="header-left">返回</div>
+    <div class="header-left" @click="leftGoBack">返回</div>
     <div class="header-middle">搜索城市/酒店/车票</div>
     <div class="header-right">城市</div>
   </div>
@@ -8,7 +8,12 @@
 
 <script>
     export default {
-        name: "HomeHeader"
+        name: "HomeHeader",
+      methods:{
+        leftGoBack:function () {
+          this.$emit('leftGoBack')
+        }
+      }
     }
 </script>
 

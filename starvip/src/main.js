@@ -10,10 +10,17 @@ import VueAwesomeSwiper from 'vue-awesome-swiper'
 import 'swiper/dist/css/swiper.css'
 
 import Mint from 'mint-ui';
+
+
+import Vant, {NavBar} from 'vant';
+import 'vant/lib/index.css';
+
 Vue.use(Mint);
+Vue.use(Vant);
+Vue.use(NavBar);
 
 Vue.config.productionTip = false;
-Vue.use(VueAwesomeSwiper)
+Vue.use(VueAwesomeSwiper);
 
 /* eslint-disable no-new */
 new Vue({

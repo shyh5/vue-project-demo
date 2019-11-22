@@ -14,22 +14,42 @@ export default new Router({
     {
       path: '/',
       name: 'home',
-      component: home
+      component: home,
+      meta:{
+        title: '首页',
+        isLogin: true,
+        keepAlive: true //true显示头部
+      }
     },
     {
       path: '/find',
       name: 'Find',
-      component: Find
+      component: Find,
+      meta:{
+        title: '发现',
+        isLogin: true,
+        keepAlive: true //true显示头部
+      }
     },
     {
       path: '/mine',
       name: 'mine',
-      component: mine
+      component: mine,
+      meta:{
+        title: '我的',
+        isLogin: true,
+        keepAlive: true //true显示头部
+      }
     },
     {
       path: '/merc',
       name: 'merc',
-      component: merc
+      component: merc,
+      meta:{
+        title: '商户',
+        isLogin: true,
+        keepAlive: true //true显示头部
+      }
     },
 
 

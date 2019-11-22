@@ -1,25 +1,36 @@
 <template>
-
   <div id="home">
     <p>home page 页面</p>
-    <button @click="pushFind('/find')" class="btn">点击跳转发现页</button>
-    <br>
-    <button @click="pushFind('/mine')" class="btn">点击跳转我的页面</button>
-    <br>
-    <button @click="pushFind('/merc')" class="btn">点击跳转项目</button>
+    <div v-for="item in btnList" :key="item.title">
+      <van-button type="primary" :to="item.path">{{item.title}}</van-button>
+      <br>
+    </div>
   </div>
-
 
 </template>
 
 <script>
+  import Vue from 'vue';
+  import { Button } from 'vant';
+  Vue.use(Button);
+
   export default {
     name: "home",
-    methods:{
-      pushFind:function (value) {
-        this.$router.push(value);
+    data() {
+      return {
+        btnList: [{
+          path:'/find',
+          title:'发现'
+        },{
+          path:'/mine',
+          title:'我的'
+        },{
+          path:'/merc',
+          title:'项目'
+        }]
       }
-    }
+    },
+
   }
 </script>
 
@@ -35,6 +46,5 @@
     border-color: rebeccapurple;
     margin-top: .5rem;
   }
-
 
 </style>

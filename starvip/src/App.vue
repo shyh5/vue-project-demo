@@ -1,19 +1,21 @@
 <template>
   <div id="app">
     <!--这个一定要写-->
-    <router-view></router-view>
+    <router-view>
+      <div>导航栏</div>
+    </router-view>
+    <base-tabbar/>
   </div>
 </template>
 
 <script>
-export default {
-  name: 'App',
-  methods:{
-    push:function () {
-      this.$router.push('find');
+  import BaseTabbar from './pages/public/BaseTabbar';
+  export default {
+    name: 'App',
+    components: {
+      BaseTabbar
     }
   }
-}
 </script>
 
 <style>
@@ -23,6 +25,6 @@ export default {
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
   color: #2c3e50;
-  margin-top: 60px;
+  margin-top: 0px;
 }
 </style>
