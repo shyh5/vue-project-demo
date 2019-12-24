@@ -27,6 +27,9 @@
         },{
           path:'/merc',
           title:'项目'
+        },{
+          path:'/vueBase',
+          title:'vue 基础页面'
         }]
       }
     },

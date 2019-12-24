@@ -6,6 +6,7 @@ import home from '@/pages/home/home';
 import Find from '@/pages/find/Find';
 import mine from '@/pages/mine/mine';
 import merc from '@/pages/Merc/merc';
+import vueBase from '@/pages/home/VueBase/vueBase';
 
 Vue.use(Router);
 
@@ -45,6 +46,16 @@ export default new Router({
       path: '/merc',
       name: 'merc',
       component: merc,
+      meta:{
+        title: '商户',
+        isLogin: true,
+        keepAlive: true //true显示头部
+      }
+    },
+    {
+      path: '/vueBase',
+      name: 'vueBase',
+      component: vueBase,
       meta:{
         title: '商户',
         isLogin: true,

@@ -38,7 +38,7 @@
           },
           {
             kind: 'primary',
-            msg: '主要-我的页面',
+            msg: '主要-我的',
             path:'/mine'
           },
           {
@@ -72,6 +72,15 @@
         this.liList.push(this.inputN);
         this.inputN = '';
       }
+
+    },
+
+    /*生命周期函数*/
+    beforeCreate() {
+      console.log('beforeCreate')
+    },
+
+    created() {
 
     }
   }
