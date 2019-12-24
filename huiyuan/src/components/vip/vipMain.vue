@@ -1,14 +1,10 @@
 <template>
   <div id="container">
     <img src="../../assets/img/main/introduce.png" alt="郁金香" class="headImg">
-    <div>
-      <main-item class="main-item"></main-item>
+    <div v-for="model in list">
+      <main-item class="main-item" :model="model"></main-item>
       <br>
       <br>
-      <main-item class="main-item"></main-item>
-      <br>
-      <br>
-      <main-item class="main-item"></main-item>
     </div>
     <button class="merc" @click="onPress">选择商户</button>
   </div>
@@ -23,27 +19,27 @@
         this.$router.push('/vipMerc');
       }
     },
-    // data() {
-    //   return{
-    //     list:[
-    //       {
-    //         title:'支付即会员',
-    //         msg:'高效沉淀用户，迅速聚集人气。',
-    //         url:'../../../assets/img/main/device.png'
-    //       },
-    //       {
-    //         title:'丰富的营销工具',
-    //         msg:'随机减、满减、券、积分、储值。',
-    //         url:'../../../assets/img/main/device.png'
-    //       },
-    //       {
-    //         title:'完美连接蜻蜓设备',
-    //         msg:'完美连接蜻蜓设备',
-    //         url:'../../../assets/img/main/device.png'
-    //       }
-    //     ]
-    //   }
-    // },
+    data() {
+      return{
+        list:[
+          {
+            title:'支付即会员',
+            msg:'高效沉淀用户，迅速聚集人气。',
+            urlS:require('../../assets/img/main/huiyuan.png')
+          },
+          {
+            title:'丰富的营销工具',
+            msg:'随机减、满减、券、积分、储值。',
+            urlS:require('../../assets/img/main/yingxiao.png')
+          },
+          {
+            title:'完美连接蜻蜓设备',
+            msg:'完美连接蜻蜓设备',
+            urlS:require('../../assets/img/main/device.png')
+          }
+        ]
+       }
+    },
     components: {
       MainItem
     }
