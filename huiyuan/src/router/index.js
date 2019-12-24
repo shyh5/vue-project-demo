@@ -1,15 +1,22 @@
 import Vue from 'vue'
 import Router from 'vue-router'
-import HelloWorld from '@/components/HelloWorld'
+import vimMain from '@/components/vip/vipMain'
+import vipMerc from '@/components/vip/vipMerc'
 
-Vue.use(Router)
+
+Vue.use(Router);
 
 export default new Router({
   routes: [
     {
       path: '/',
-      name: 'HelloWorld',
-      component: HelloWorld
+      name: 'vimMain',
+      component: vimMain
+    },
+    {
+      path: '/vipMerc',
+      name: 'vipMerc',
+      component: vipMerc
     }
   ]
 })
